@@ -1,2 +1,2 @@
 # MagicalVolumeUID
-Get Magic UID On Your Windows Disk.
+Get Magic UID On Your Windows Drive.
