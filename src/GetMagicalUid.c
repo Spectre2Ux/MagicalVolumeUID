@@ -19,8 +19,6 @@ BOOL WriteLog(const char* LogText);
 BOOL EnableLogFile();
 void DiskChangeFunction(void);
 void GetMagicUidFunction(void);
-void StopWriteToProgramm(void);
-
 
 
 int main() {
@@ -42,25 +40,21 @@ BOOL MagicVolumeMenu() {
 		if (strcmp(MagicMenuChoice, DISKATTACH) == 0) {
 			WriteLog("User Choise: DISKATTACH");
 			DiskChangeFunction();
-			StopWriteToProgramm();
 
 
 		}
 		else if (strcmp(MagicMenuChoice, GETUID) == 0) {
 			WriteLog("User Choise: GETUID");
 			GetMagicUidFunction();
-			StopWriteToProgramm();
 
 		}
 		else if (strcmp(MagicMenuChoice, GETPROGRAMCOMMAND) == 0) {
 			WriteLog("User Choise: GETPROGRAMCOMMAND");
 			GetProgramCommand();
-			StopWriteToProgramm();
 
 		}
 		else {
 			printf("MagicVolumeUid Error!, Unknown Command\n\n");
-			StopWriteToProgramm();
 
 		}
 
@@ -170,9 +164,4 @@ BOOL WriteLog(const char* LogText) {
 
 	return TRUE;
 
-}
-
-void StopWriteToProgramm() {
-
-	return;
 }
